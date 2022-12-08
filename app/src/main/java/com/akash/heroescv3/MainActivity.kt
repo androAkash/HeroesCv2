@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.akash.heroescv3.adapter.HeroAdapter
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         val popUpMenu =PopupMenu(this,null)
         popUpMenu.inflate(R.menu.bottom_navigation_menu)
         binding.bottomNavigationView.setupWithNavController(navController)
+        binding.toolBar.setupWithNavController(navController)
     }
 
 }
