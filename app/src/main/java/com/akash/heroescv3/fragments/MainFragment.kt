@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.activity.viewModels
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.akash.heroescv3.R
 import com.akash.heroescv3.adapter.HeroAdapter
 import com.akash.heroescv3.databinding.FragmentMainBinding
@@ -38,7 +39,9 @@ class MainFragment : Fragment() {
 
         binding.recyclerView.apply {
             adapter = heroAdapter
-            layoutManager = LinearLayoutManager(requireContext())
+            layoutManager = StaggeredGridLayoutManager(
+                2,StaggeredGridLayoutManager.VERTICAL
+            )
             setHasFixedSize(true)
         }
 
